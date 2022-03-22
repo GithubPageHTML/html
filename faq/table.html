@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Bugs Table</h2>
+  <p>Type something in the input field to search the table for Phone type, Android OS, OS interface..ETC:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-light">
+      <tr>
+      				<th>Company</th>
+        <th>Device</th>
+        <th>Android System</th>
+        <th style="word-wrap: break-word;min-width: 160px;max-width: 160px;">OS interface</th>
+        <th style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Phone specifications</th>
+        <th style="word-wrap: break-word;min-width: 160px;max-width: 160px;">VMOS build number</th>
+        <th style="word-wrap: break-word;min-width: 160px;max-width: 160px;">ROM Number & info</th>
+        <th style="word-wrap: break-word;min-width: 160px;max-width: 160px;">The Description</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+      				<td>OnePlus</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Oneplus Nord<br><strong>Also known as:</strong><br>OnePlus 8 NORD 5G<br> OnePlus Z</td>
+        <td>11</td>
+        <td>OxygenOS</td>
+        <td>256 GB Rom, 12 Ram</td>
+        <td>All</td>
+        <td>Chinese rom 1.2.2</td>
+        <td style="word-wrap: break-word;min-width: 300px;max-width: 300px;">  • <span style="color:#800000;">Contacts not working on 7.1:</span><br>
+1. When doing video call from any messaging apps (mostly happens on WhatsApp and WhatsApp business) on 7.1 overlapped a grey shadow<br>
+2. When doing calls in any messaging apps facing voice problem on 5.1 and 7.1</td>
+    </tr> 
+    
+    <tr>
+      				<td>Huawei</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">P40 Pro</td>
+        <td>10</td>
+        <td>Emui 11</td>
+        <td>256 GB Rom, 8 Ram</td>
+        <td>1.0.63</td>
+        <td></td>
+        <td style="word-wrap: break-word;min-width: 300px;max-width: 300px;">  Cannot run Vmos global pro with my phone, after updating to latest version. App doesn't start</td>
+    </tr> 
+
+<tr>
+
+<td>Huawei</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Huawei Mate 20 Pro</td>
+        <td>10</td>
+        <td>Emui 11</td>
+        <td>128 GB Rom, 6GB Ram</td>
+        <td>Play Store 1.1.0</td>
+        <td></td>
+        <td style="word-wrap: break-word;min-width: 300px;max-width: 300px;">  Cannot run VMOS Pro in my phone. Force close after downloading the ROM. </td>
+    </tr>
+
+
+<td>Samsung</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Samsung S22</td>
+        <td>12</td>
+        <td>One UI 4.1</td>
+        <td>256 GB Rom, 8 Ram</td>
+        <td>Chinese 2.2.0</td>
+        <td>Global or Chinese rom 1.1.47</td>
+        <td style="word-wrap: break-word;min-width: 300px;max-width: 300px;"> Black screen after loading rom </td>
+    </tr>
+
+<td>Xiaomi</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">Xiaomi POCO</td>
+        <td>11</td>
+        <td>MIUI 12.5.6</td>
+        <td>256 GB Rom, 8 Ram</td>
+        <td>Chinese 2.2.0</td>
+        <td>256 GB ROM, 8GB Ram</td>
+        <td style="word-wrap: break-word;min-width: 300px;max-width: 300px;"> gyroscope not working in game, try add more virtual information to gyroscope if possible. </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<div>
+<script type="text/javascript">
+alert("Hello 👋 from here you can find out the reports that were sent by other users as well\n"+"if you have any bugs with vmos not exist in this table please report in vmos group");
+</script>
+</div>
+
+
+</body>
+</html>
